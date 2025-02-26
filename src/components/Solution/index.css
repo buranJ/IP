@@ -1,0 +1,51 @@
+.swiper-button-prev {
+    background-image: url('../../assets/img/Bisness/leftbtn.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10%;
+    margin: 0 auto;
+    margin-top: 240px;
+    width: 57px;
+    height: 50px;
+}
+
+.swiper-button-next {
+    background-image: url('../../assets/img/Bisness/rightbtn.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 57px;
+    height: 50px;
+    left: 10%;
+    margin: 0 auto;
+    margin-top: 240px;
+}
+
+@media (max-width: 770px) {
+    .swiper-button-prev {
+        margin-left: 15%;
+
+    }
+
+    .swiper-button-next {
+        margin-right: 15%;
+
+    }
+    .swiper-slide{
+        right: -15px;
+    }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+    /* display: flex; */
+    /* gap: 20px 0; */
+}
+
+.solution {
+    background: white;
+}

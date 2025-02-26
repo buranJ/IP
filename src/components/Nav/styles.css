@@ -1,0 +1,11 @@
+.item{
+    color: whitesmoke;
+}
+.active{
+    color: red;
+}
+nav{
+
+    justify-content: space-between;
+    align-items: center;
+}
