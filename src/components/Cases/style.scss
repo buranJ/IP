@@ -1,0 +1,44 @@
+.case__swiper {
+    width: 100%;
+  }
+
+@media(min-width:370px){
+    .case-arrow{
+        left: 300px;
+    }
+}
+
+@media(min-width:400px){
+    .case-arrow{
+        left: 330px;
+    }
+}
+
+@media(min-width:420px){
+    .case-arrow{
+        position: relative;
+        left: 0%;
+        justify-self: end;
+    }
+    .slide-con{
+        display: flex;
+        justify-content: center;
+    }
+    .case__slider-img{
+       width:159px;
+        height:248px;
+        margin-right: 15px;
+        align-items: center;
+    }
+    .case__slider-info{
+        max-width: 251px;
+        max-height: 172px;
+    }
+}
+
+@media(min-width:500px){
+    .case__slider-info{
+        width: 269px;
+        height: 149px;
+    }
+}

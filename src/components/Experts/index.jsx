@@ -93,6 +93,7 @@ function Experts() {
     ]
     const [swiperInstance, setSwiperInstance] = useState(null);
     const [filteredForums, setFilteredForums] = useState(forumsData);
+    const [currentBtn, setActiveBtn]=useState(null);
 
     const showFutureForums = () => {
         const futureForums = forumsData.filter((forum) => forum.category === "Будущие");
@@ -101,6 +102,9 @@ function Experts() {
     const showPastForums = () => {
         const pastForums = forumsData.filter((forum) => forum.category === "Прошедшие");
         setFilteredForums(pastForums)
+    }
+   const  toggleActiveBtn=(BtnType)=>{
+       setActiveBtn((prevBtn)=>(prevBtn===BtnType ? null : BtnType))
     }
 
     return (
@@ -138,7 +142,8 @@ function Experts() {
 
                         >
 
-                            {expertsData.map((slide) => <SwiperSlide className='expert__slide' >
+                            {expertsData.map((slide) => 
+                            <SwiperSlide className='expert__slide' >
                                 <div className="expert__photo relative">
                                     <img src={slide.img} alt="img__expert" />
                                     <div className="absolute inset-0 bg-[#5c5c5c] opacity-50"></div>
@@ -157,11 +162,13 @@ function Experts() {
                         <div className="experts__forums-info flex justify-between">
                             <div className="experts__forum-title font-medium text-[20px] md:text-[24px]">Мы на форумах</div>
                             <div className="experts__forum-category flex gap-[25px] font-medium text-[16px]">
-                                <button className="past__forums text-[#5c5c5c]"
-                                    onClick={showPastForums}
+                                <button className={`past__forums  text-[#5c5c5c] ${currentBtn=== "past"? 'active' : ''}`}
+                                     onClick={()=>{toggleActiveBtn("past") 
+                                        showPastForums()}}
                                 >Прошедшие</button>
-                                <button className="future__forums text-[#da4533]"
-                                    onClick={showFutureForums} >Будущие</button>
+                                <button className={`future__forums  text-[#5c5c5c] ${currentBtn==="future" ? 'active' : ''}`}
+                                    onClick={()=>{toggleActiveBtn("future") 
+                                    showFutureForums()}} >Будущие</button>
                             </div>
                         </div>
                         {filteredForums.map((forum) =>
@@ -173,13 +180,13 @@ function Experts() {
                                         <p className="forum__par-des max-w-[330px] mt-[5px] text-[#5c5c5c] text-[14px] font-normal">{forum.position}</p>
                                     </div>
                                 </div>
-                                <div className="expert__wrap flex xl:ml-[-150px]">
+                                <div className="expert__wrap flex xl:ml-[-90px]">
                                     <div className="forum__information flex flex-col justify-center">
                                         <div className="forum__place text-[18px] font-medium">{forum.place}</div>
                                         <hr className='forum__line mt-[5px] border-[#da4533] w-[271px] md:w-[339px] lg:w-[495px]'></hr>
                                         <p className="forum__description  mt-[5px] max-w-[495px] text-[#5c5c5c] text-[16px] font-normal">{forum.des}</p>
                                     </div>
-                                    <div className="forum__scedule flex xl:ml-[-90px]">
+                                    <div className="forum__scedule flex xl:ml-[-10px]">
                                         <BigCircles>
                                             <p className="forum__date ml-[30px]">{forum.date}</p>
                                             <span className="forum__time ml-[50px]"> {forum.time}</span>

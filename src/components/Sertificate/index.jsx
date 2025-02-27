@@ -4,7 +4,7 @@ import './style.scss'
 function Sertificate() {
     return (
         <section className="sertificate flex justify-end">
-            <div className="container  max-w-[804px] mx-[20px] self-end">
+            <div className="container  max-w-[804px] mx-[20px]">
                 <h4 className="ser__title text-white text-[24px] font-normal sm:text-[28px] md:text-[32px] xl:text-[38px]">Подтвержденный практикой</h4>
                 <p className="ser__des mr-[20px] mt-[14px] text-white text-sm font-medium sm:text-[16px]">Мы и наши клиенты гордимся опытом, который подтверждается нашими результатами от закрепления прав заявителей до успешной защиты интересов</p>
                 <div className="ser__imgs grid grid-cols place-items-center w-full  gap-[15px] mt-[39px] 

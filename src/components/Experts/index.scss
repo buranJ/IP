@@ -18,7 +18,9 @@
     opacity: 0.5;
     pointer-events: none;
 }
-
+.active{
+    color: #da4533
+}
 
 @media(max-width:900px) {
     .expert__wrap {
