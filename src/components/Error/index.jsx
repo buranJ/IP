@@ -1,4 +1,3 @@
-
 import fall from "../../assets/img/Error/fall.svg";
 import Circle from "../Button/Circle"
 import arrow from '../../assets/img/Hero/Arrow 8.svg';

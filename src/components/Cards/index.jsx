@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./style.scss";
 
 import img1 from "../../assets/img/Cards/objects1.png";
@@ -24,7 +24,7 @@ const servicesData = [
 
 const categories = ["Все услуги", "Товарные знаки", "Патенты", "Дизайн", "IT", "Защита", "Управление", "Обучение"];
 
-const App = () => {
+const Cards = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("Все услуги");
 
@@ -79,4 +79,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Cards;
