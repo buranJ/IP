@@ -7,6 +7,8 @@ import Cases from "../../components/Cases"
 import Quiz from "../../components/Quiz"
 import Experts from "../../components/Experts"
 import Consultation from "../../components/Consultation"
+import ProdCase from "../../pages/ProdCase/ProductCase"
+
 
 
 export const Home = () => {
@@ -21,6 +23,7 @@ export const Home = () => {
             <Cases/>
             <Experts />
             <Consultation/>
+            <ProdCase/> 
         </main>
     )
 }
