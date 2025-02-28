@@ -1,0 +1,16 @@
+.burger__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    nav {
+        display: flex;
+        align-items: stretch;
+    }
+
+}
+
+.burger__nav {
+    display: flex;
+    justify-content: end;
+    transform: translateY(50px);
+}
