@@ -1,11 +1,11 @@
 
-
+import ThirdCon from "../../components/ThirdCon"
 
 export const Case = () => {
   return (
     <>
      
-      <div>Cassfsafasfwefjlwkefhlewfhe</div>
+     <ThirdCon/>
     </>
 
   )
