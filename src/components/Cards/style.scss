@@ -1,0 +1,159 @@
+.services__container {
+    padding: 2rem;
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.services__header {
+    margin-bottom: 2rem;
+}
+
+.services__h2 {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 135%;
+    color: var(--white);
+}
+
+.search__input {
+    border-radius: 8px;
+    padding: 7px 15px;
+    width: 907px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.categories__container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    background-color: #1a1a1a;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.category__button {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0px;
+}
+
+
+.category__button.active {
+    background-color: #5c5c5c;
+}
+
+
+.category {
+    display: flex;
+    align-items: center;
+
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 1.5rem;
+}
+
+.service__card {
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 289px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
+    &:hover {
+        background-color: #292929;
+    }
+}
+
+.service__tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.service__tag {
+    background-color: #3a3a3a;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.service__image {
+    width: 155px;
+    height: 175px;
+    margin-top: 48px;
+}
+
+.service__content {
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 65px; 
+}
+
+.service__action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.service__arrow {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.search__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    width: 728px;
+}
+
+.search__input {
+    padding-left: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.search__icon {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .services__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service__card {
+        margin-bottom: 1rem;
+    }
+}

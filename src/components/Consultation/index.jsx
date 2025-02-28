@@ -1,16 +1,21 @@
 import './style.scss'
 
-import img1 from '../../assets/img/Consultation/consul__img1.svg'
-import img2 from '../../assets/img/Consultation/consul__img2.svg'
-import img3 from '../../assets/img/Consultation/consul__img3.svg'
+import Defaultimg1 from '../../assets/img/Consultation/consul__img1.svg'
+import Defaultimg2 from '../../assets/img/Consultation/consul__img2.svg'
+import Defaultimg3 from '../../assets/img/Consultation/consul__img3.svg'
 
-function Consultation(){
+function Consultation({
+    title="Оставьте заявку на консультацию и мы вам поможем!",
+    img1=Defaultimg1,
+    img2=Defaultimg2,
+    img3=Defaultimg3,
+    titleClass=''}){
     return(
         <section className="consultation flex bg-[#da4533] pt-[40px] md:pt-[60px] lg:pt-[100px] pb-[24px] md:pb-[80px] lg:pb-[100px]">
             <div className="container-consulation  flex self-center text-white mx-[20px]  text-center md:text-start">
                 <div className="consultation__info flex flex-col items-center  md:items-start">
-                    <div className="consulation__title  max-w-[707px] text-[24px]  sm:text-[28px]  md:text-[32px] lg:text-[38px] font-normal">
-                        Оставьте заявку на консультацию и мы вам поможем!</div>
+                    <div className={`consulation__title  max-w-[707px] text-[24px]  sm:text-[28px]  md:text-[32px] lg:text-[38px] font-normal ${titleClass}`}>
+                     {title} </div>
                 <p className="consultation__des  max-w-[600px] mt-[12px] text-[14px] md:text-[16px] font-medium">У нас есть решения для всех ваших потребностей в сфере защиты и регистрации интеллектуальной собственности</p>
               <div className="consultation__get relative  bg-black mt-[40px]
         w-[299px] h-[91px] flex items-center text-center 
@@ -22,7 +27,7 @@ function Consultation(){
 </svg>
               </div>
         </div>
-        <div className="consultation__img ">
+        <div className="consultation__img lg:ml-[200px]">
             <div className="img__wrap w-[250px]">  
                  <img className='hidden md:flex lg:hidden  '
              src={img1} alt="img__consultation" />
