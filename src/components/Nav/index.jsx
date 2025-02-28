@@ -8,6 +8,8 @@ export const Nav = () => {
             <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
                 to='/cases'>Кейсы</NavLink>
             <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
+                to='/register'>Register</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
                 to='/faq'>FAQ</NavLink>
         </nav>
     )
