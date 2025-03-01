@@ -8,6 +8,9 @@ import Quiz from "../../components/Quiz"
 import Experts from "../../components/Experts"
 import Consultation from "../../components/Consultation"
 import ProdCase from "../../pages/ProdCase/ProductCase"
+import Register from "../../pages/Register/Register"
+
+
 
 
 
@@ -20,10 +23,12 @@ export const Home = () => {
             <Sertificate />
             <Solution />
             <Quiz />
-            <Cases/>
+            <Cases />
             <Experts />
-            <Consultation/>
-            <ProdCase/> 
+            <Consultation />
+            <ProdCase />
+            <Register />
+
         </main>
     )
 }

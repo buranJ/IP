@@ -1,10 +1,12 @@
 import React from "react";
 import Elipse from "../../components/Button/Elipse";
 import obj from "../../assets/img/Prod/obj.svg";
+import Register from "../Register/Register";
 
 function ProdCase() {
     return (
-        <section className="bg-black min-h-screen flex items-center justify-center p-5">
+        <>
+         <section className="bg-black min-h-screen flex items-center justify-center p-5">
             <div className="container">
                 <div className="relative bg-[#1B1B1B] flex flex-wrap md:flex-nowrap justify-between items-center text-white rounded-lg border border-red-500/30 shadow-[0_0_15px_rgba(255,77,77,0.4)] p-8 md:p-12 mx-auto max-w-screen-lg before:absolute before:inset-0 before:rounded-lg before:border before:border-red-500/60 before:shadow-[0_0_10px_rgba(255,77,77,0.6)] before:pointer-events-none">
                     
@@ -25,14 +27,15 @@ function ProdCase() {
                             </Elipse>
                         </div>
                     </div>
-
-                    {/* Правая часть (Изображение) */}
                     <div className="hidden md:block">
                         <img src={obj} alt="3D-объект" className="max-w-xs opacity-90" />
                     </div>
                 </div>
             </div>
         </section>
+        < Register/>
+        </>
+       
     );
 }
 
