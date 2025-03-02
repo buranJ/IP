@@ -14,7 +14,7 @@ function Register({ children }) {
               {registerData.map((item) => (
                 <div
                   key={item.id}
-                  className="register__frame gap-[20px] w-[370px] bg-[#1B1B1B] h-[170px] p-6 rounded-lg border border-red-500/50 text-white"
+                  className="register__frame gap-[20px] w-[370px] bg-[#1B1B1B] h-[190px] p-6 rounded-lg border border-red-500/50 text-white"
                 >
                   <h4 className="font-main font-medium text-[18px] leading-[160%] text-white">
                     {item.title}
