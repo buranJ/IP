@@ -1,9 +1,9 @@
-import React from "react";
+
 import Elipse from "../../components/Button/Elipse";
 import obj from "../../assets/img/Prod/obj.svg";
 import Register from "../Register/Register";
 import Numbers from "../Numbers/Numbers";
-import HeaderService from "../HeaderService/HeaderService"
+
 import ServiceSwiper from "../ServiceSwiper/Service"
 
 function ProdCase() {
@@ -37,7 +37,7 @@ function ProdCase() {
             </section>
             < Register />
             <Numbers />
-           
+
             <ServiceSwiper />
         </>
 

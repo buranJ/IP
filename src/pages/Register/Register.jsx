@@ -1,7 +1,7 @@
-import React from "react";
+
 import registerData from "../Register/Register.json";
 
-function Register({ children }) {
+function Register() {
   return (
     <>
       <section className="register bg-black">
