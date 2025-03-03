@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import { useState } from 'react'
 import './App.css'
 
 
@@ -15,10 +15,17 @@ import Error from './components/Error'
 import Footer from './components/Footer'
 
 function App() {
+  const [isRequestOpen, setIsRequestOpen] = useState(false)
+
+  const onOpenRequest = () => setIsRequestOpen(true)
+
+  const onCloseRequest = () => setIsRequestOpen(false)
+
   return (
     <Router>
       <Header />
       <Routes>
+      <Route path="/" element={<Home onOpenRequest={onOpenRequest} />} />
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
         <Route path="/cases" element={<Case />} />
@@ -28,6 +35,7 @@ function App() {
       </Routes>
       
       <Footer />
+      {isRequestOpen && <RequestForm onClose={onCloseRequest} />}
     </Router>
   )
 }
