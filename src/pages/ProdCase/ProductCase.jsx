@@ -24,7 +24,7 @@ function ProdCase() {
                                 Полный цикл регистрации обозначения в качестве товарного знака, начиная от подачи заявки, заканчивая получением Свидетельства.
                             </p>
                             <div className="mt-6">
-                                <Elipse bg="red" className="px-6 py-3 text-lg font-medium transition duration-300 ease-in-out transform hover:scale-105">
+                                <Elipse bg="#DA4533" className="px-6 py-3 text-lg font-medium transition duration-300 ease-in-out transform hover:scale-105">
                                     Получить индивидуальную <br /> консультацию
                                 </Elipse>
                             </div>

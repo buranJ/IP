@@ -31,7 +31,7 @@ function Bisness() {
 
                     {showButton && (
                         <Circle>
-                            Все услуги <img src={arrow} alt="Стрелка" />
+                           <p>Все услуги</p><img src={arrow} className="group-hover:transform group-hover:translate-x-10 duration-500 transform translate-x-7 " alt="Стрелка" />
                         </Circle>
                     )}
                 </div>

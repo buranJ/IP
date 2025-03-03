@@ -44,7 +44,7 @@ const Cards = () => {
                         <input
                             type="text"
                             placeholder="Начните вводить слово"
-                            className="search__input"
+                            className="search__input  "
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
@@ -52,23 +52,26 @@ const Cards = () => {
                 </div>
                 <div className="categories__container">
                     <p className="category">КАТЕГОРИИ</p>
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            className={`category__button ${selectedCategory === category ? "active" : ""}`}
-                            onClick={() => setSelectedCategory(category)}
-                        >
-                            {category}
-                        </button>
-                    ))}
+                    <label className=" rounded-lg " >
+                        {categories.map((category) => (
+
+                            <button
+                                key={category}
+                                className={`category__button cursor-pointer  ${selectedCategory === category ? "active" : ""}`}
+                                onClick={() => setSelectedCategory(category)}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </label>
                 </div>
                 <div className="services__grid">
                     {filteredServices.map((service) => (
-                        <div key={service.id} className="service__card">
+                        <div key={service.id} className="service__card ">
                             <img src={service.image} alt={service.title} className="service__image" />
                             <div className="service__content">
                                 <div className="service-header__content">
-                                    <h3>{service.title}</h3>
+                                    <h3  >{service.title}</h3>
                                 </div>
                             </div>
                         </div>

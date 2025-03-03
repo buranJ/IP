@@ -59,10 +59,10 @@ function Acardion() {
                                     ${openIndex === index ? "bg-[#2a2a2a]" : "bg-[#1a1a1a]"}`}
                                 >
                                     <button
-                                        className="faq__question flex justify-between items-center w-full text-left p-[20px] text-[18px] text-white"
+                                        className="faq__question flex justify-between items-center w-full cursor-pointer text-left p-[20px] text-[18px]  text-white"
                                         onClick={() => toggleOpen(index)}
                                     >
-                                        <span>{faq.question}</span>
+                                        <span  >{faq.question}</span>
                                         <Arrow direction={openIndex === index ? "up" : "down"} />
                                     </button>
                                 </div>
