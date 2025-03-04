@@ -62,6 +62,7 @@ function Cases() {
         </div>
         <div className="case__slider-content rounded-[8px] mt-[30px] md:mt-[40px] xl:mt-[50px]">
           <Swiper className='case__swiper'
+          
             spaceBetween={50}
             slidesPerView={1}
             breakpoints={{

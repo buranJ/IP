@@ -24,7 +24,7 @@ export default function BurgerMenu() {
             </div>
             {isOpen && (<div className="fixed inset-0  bg-opacity-50" onClick={() => setIsOpen(false)}></div>)}
 
-            <div className={`fixed top-0 right-0 h-full  w-64 bg-[#1b1b1b] text-white  z-1 transition duration-300  
+            <div className={`fixed top-0 right-0 h-full  w-64 bg-[#1b1b1b] text-white z-1 transition duration-300  
               ${isOpen ? "translate-x-0" : "translate-x-full"}`} >
                 <div className="burger__content px-[32px]   ">
                     <div className="burger__nav flex justify-between">
