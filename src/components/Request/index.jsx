@@ -48,11 +48,11 @@ function Request() {
                                 </div>
                                 <div className="input__mail mt-[15px] ">
                                     <p className="pre__title font-[400] text-[14px] text-[#8A8A8A] ">Почта</p>
-                                    <input type="email" required name="user_email" className="request__mail  bg-[rgba(138,138,138,0.15)] focus:bg-[#1f1f1f] mt-[2px] py-[10px] pr-[20px] pl-[15px] w-full rounded-lg focus:outline-white focus:outline-[2px] font-[400] text-[16px] " placeholder="Введите email" />
+                                    <input  type="email" required name="user_email" className="request__mail  bg-[rgba(138,138,138,0.15)] focus:bg-[#1f1f1f] mt-[2px] py-[10px] pr-[20px] pl-[15px] w-full rounded-lg focus:outline-white focus:outline-[2px] font-[400] text-[16px] " placeholder="Введите email" />
                                 </div>
                                 <div className="input__comment mt-[15px] ">
                                     <p className="pre__title font-[400] text-[14px] text-[#8A8A8A] ">Запрос</p>
-                                    <input type="text" name="user_req" className="request__comment  bg-[rgba(138,138,138,0.15)] focus:bg-[#1f1f1f] mt-[2px] py-[10px] pr-[20px] pl-[15px] w-full h-[120px] rounded-lg focus:outline-white focus:outline-[2px] font-[400] text-[16px] " />
+                                    <textarea type="text" name="user_req" className="request__comment  bg-[rgba(138,138,138,0.15)] focus:bg-[#1f1f1f] mt-[2px] py-[10px] pr-[20px] pl-[15px] w-full h-[120px] rounded-lg focus:outline-white focus:outline-[2px] font-[400] text-[16px] " />
                                 </div>
                                 <div className="input__submit flex items-start mt-[15px]  max-w-[310px] md:max-w-[380px] gap-[8px] ">
                                     <input type="checkbox" className="request__check bg-[#1f1f1f] " />
