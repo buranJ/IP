@@ -1,5 +1,5 @@
 
-import registerData from "../Register/Register.json";
+import registerData from "./Register.json";
 
 function Register() {
   return (

@@ -16,7 +16,7 @@ import foto3 from "../../assets/img/ServiceSwiper/object3.svg"
 import foto4 from "../../assets/img/ServiceSwiper/object4.svg"
 import foto5 from "../../assets/img/ServiceSwiper/object5.svg"
 
-import Circle from "../../components/Button/Circle";
+import Circle from "../Button/Circle";
 import HeaderService from "../HeaderService/HeaderService";
 import { object } from "prop-types";
 

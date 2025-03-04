@@ -1,6 +1,6 @@
 import React from "react";
 
-import numberData from "../Numbers/Numbers.json";
+import numberData from "./Numbers.json";
 import num1 from "../../assets/img/Numbers/1.svg";
 import num2 from "../../assets/img/Numbers/2.svg";
 import num3 from "../../assets/img/Numbers/3.svg";

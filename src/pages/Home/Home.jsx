@@ -7,9 +7,7 @@ import Cases from "../../components/Cases"
 import Quiz from "../../components/Quiz"
 import Experts from "../../components/Experts"
 import Consultation from "../../components/Consultation"
-import ProdCase from "../../pages/ProdCase/ProductCase"
-import Register from "../../pages/Register/Register"
-import Numbers from "../../pages/Numbers/Numbers"
+
 
 
 
@@ -27,10 +25,6 @@ export const Home = () => {
             <Cases />   
             <Experts />
             <Consultation />
-            <ProdCase />
-            <Register />
-            <Numbers />
-
         </main>
     )
 }

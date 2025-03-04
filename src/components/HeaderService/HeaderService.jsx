@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Circle from "../../components/Button/Circle";
+import Circle from "../Button/Circle";
 import arrow from "../../assets/img/Hero/Arrow 8.svg";
 
 function HeaderService() {
