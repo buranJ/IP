@@ -16,7 +16,7 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <header className="header bg-[#1f1f1f] fixed w-full flex z-2 p-[23px]" >
+            <header className="header bg-[#1f1f1f]  flex z-2 p-[23px]" >
                 <div className="container mx-auto">
                     <div className="header__content flex justify-between">
                         <Link to="/" className="header__link" >
