@@ -13,8 +13,6 @@ import { Home } from './pages/Home/Home'
 import Header from './components/Header'
 import Error from './components/Error'
 import Footer from './components/Footer'
-import ProdCase from './pages/ProdCase/ProdCase'
-import Register from './pages/Register/Register'
 
 
 function App() {
@@ -28,7 +26,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home onOpenRequest={onOpenRequest} />} />
+
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
         <Route path="/cases" element={<Case/>} />
@@ -37,10 +35,9 @@ function App() {
         <Route path="/faq" element={<Faq />} /> 
         <Route path="*" element={<Error />} />
       </Routes>
-      {/* <Request /> */}
 
       <Footer />
-      {isRequestOpen && <RequestForm onClose={onCloseRequest} />}
+
     </Router>
   )
 }
