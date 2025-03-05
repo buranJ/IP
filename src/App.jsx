@@ -9,7 +9,8 @@ import { Case } from './pages/Case/Case'
 import { Faq } from './pages/Faq/Faq'
 import { Home } from './pages/Home/Home'
 
-
+import ProdCase from './pages/ProdCase/ProdCase'
+import Register from './pages/Register/Register'
 import Header from './components/Header'
 import Error from './components/Error'
 import Footer from './components/Footer'
