@@ -10,7 +10,7 @@ function Elipse({ bg, children, wrap = "relative  " }) {
   return (
     <>
       <button style={{ background: bg }} onClick={() => setIsOpen(true)} className={` ${wrap} cursor-pointer elipse text-[14px] md:text-[16px]  max-w-[259px] px-[20px] py-[23px] rounded-[100%] text-white`}>
-        <span className=" absolute inset-0 hover:border hover:border-white  rounded-[100%] scale-104  -rotate-8 duration-80 "></span>
+        <span className=" absolute inset-0 hover:border hover:border-white  rounded-[100%] scale-104  -rotate-8 duration-90 "></span>
         {children}
       </button>
 
