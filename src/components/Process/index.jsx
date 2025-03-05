@@ -3,9 +3,15 @@ import Num2 from '../../assets/img/Process/imgNum1.svg'
 import Num3 from '../../assets/img/Process/imgNum2.svg'
 import Num4 from '../../assets/img/Process/imgNum3.svg'
 import Num5 from '../../assets/img/Process/imgNum4.svg'
+import Btn1 from '../../assets/img/Process/slider__btn1.svg';
+import Btn2 from '../../assets/img/Process/slider__btn2.svg';
+import arrow from '../../assets/img/Process/arrow__process.svg'
+import processImg1 from '../../assets/img/Process/des__img1.svg'
+import processImg2 from '../../assets/img/Process/des__img2.svg'
+import processImg3 from '../../assets/img/Process/des__img3.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react'
-
+import './index.css'
 const stageData=[
     {
         id:1,
@@ -62,17 +68,19 @@ function Process(){
                   <div className="process__title mt-[12px] font-normal text-[24px] md:text-[26px] lg:text-[32px] xl:text-[38px]">Процесс работы</div>
                <div className="process__des mt-[12px] md:mt-[16px] text-[#8a8a8a] text-[14px] md:text-[16px] font-medium max-w-[701px]">Достаточно емкое описание блока в две строки, позволяющее расскрыть смысл блока, привлечь внимание пользователя и побудить в действию</div>
                </div>
-               <div className="process__navigation hidden md:flex md:place-self-end">
-               <div className="minibuttons mt-[25px] flex gap-[10px] justify-center">
-                          <button className="btn-mini-right flex items-center gap-[10px] justify-center"
+               <div className="process__navigation hidden md:flex md:place-self-end ">
+               <div className="process__btns  mt-[25px] flex gap-[10px] justify-center">
+                          <button className="process-right flex items-center gap-[10px] justify-center"
                               onClick={()=>swiperInstance.slidePrev()}
                           >
-                              <img src={Btn1} alt="Previous" />
+                              <img className='bg-[#1b1b1b]'
+                               src={Btn1} alt="Previous" />
                           </button>
-                          <button className="btn-mini-right flex items-center gap-[10px] justify-center"
+                          <button className="process-right flex items-center gap-[10px] justify-center"
                                 onClick={()=>swiperInstance.slideNext()}
                           >
-                              <img src={Btn2} alt="Next" />
+                              <img className='bg-[#1b1b1b]'
+                              src={Btn2} alt="Next" />
                           </button>
                       </div>
                </div>
@@ -95,10 +103,10 @@ function Process(){
    >
         {stageData.map((item,index)=>(
      <SwiperSlide key={index}
-     className="process__slide bg-[rgba(255, 255, 255, 0.05)] relative max-w-[216px]">
+     className="process__slide bg-[rgba(255, 255, 255, 0.05)] relative max-w-[216px]  ">
      <div className="process__img flex justify-between">
        <img className="color-black"
-           src={Test1} alt="" />
+           src={item.img} alt="num__img" />
          <img className="mr-[14px]"
          src={arrow} alt="arrow" />
 </div>
@@ -131,16 +139,18 @@ function Process(){
           </div>
            </div>
            <div className="process__slider-nav flex  justify-center md:hidden"> 
-           <div className="minibuttons mt-[25px] flex gap-[10px] justify-center">
-                          <button className="btn-mini-right flex items-center gap-[10px] justify-center"
+           <div className="process__btns mt-[25px] flex gap-[10px] justify-center">
+                          <button className="process-right flex items-center gap-[10px] justify-center"
                               onClick={()=>swiperInstance.slidePrev()}
                           >
-                              <img src={Btn1} alt="Previous" />
+                              <img className='bg-[#1b1b1b]'
+                              src={Btn1} alt="Previous" />
                           </button>
-                          <button className="btn-mini-right flex items-center gap-[10px] justify-center"
+                          <button className="process-right flex items-center gap-[10px] justify-center"
                                 onClick={()=>swiperInstance.slideNext()}
                           >
-                              <img src={Btn2} alt="Next" />
+                              <img className='bg-[#1b1b1b]'
+                               src={Btn2} alt="Next" />
                           </button>
                       </div>
      </div>

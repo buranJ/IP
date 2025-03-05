@@ -9,11 +9,13 @@ import { Case } from './pages/Case/Case'
 import { Faq } from './pages/Faq/Faq'
 import { Home } from './pages/Home/Home'
 
-import ProdCase from './pages/ProdCase/ProductCase'
+
 import Header from './components/Header'
 import Error from './components/Error'
 import Footer from './components/Footer'
-import Request from './components/Request'
+import ProdCase from './pages/ProdCase/ProdCase'
+import Register from './pages/Register/Register'
+
 
 function App() {
   const [isRequestOpen, setIsRequestOpen] = useState(false)
@@ -29,9 +31,10 @@ function App() {
         <Route path="/" element={<Home onOpenRequest={onOpenRequest} />} />
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/cases" element={<Case />} />
-        <Route path="/register" element={<ProdCase />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/cases" element={<Case/>} />
+        <Route path="/prodcase" element={<ProdCase />} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/faq" element={<Faq />} /> 
         <Route path="*" element={<Error />} />
       </Routes>
       {/* <Request /> */}

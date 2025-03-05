@@ -8,7 +8,9 @@ export const Nav = ({ display = " nav hidden md:flex gap-[30px] text-white"}) =>
             <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
                 to='/cases'>Кейсы</NavLink>
             <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
-                to='/register'>Регистрация</NavLink>
+                to='/prodcase'>Регистрация</NavLink>
+                   <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
+                to='/register'>Регистрация2</NavLink>
             <NavLink className={({ isActive }) => (isActive ? "active" : "item")}
                 to='/faq'>FAQ</NavLink>
         </nav>
