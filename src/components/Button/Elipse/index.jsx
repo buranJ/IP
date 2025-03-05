@@ -20,7 +20,7 @@ function Elipse({ bg, children, wrap = "relative  " }) {
           className="fixed inset-0 flex items-center z-2 justify-center bg-black/75"
         >
           <div onClick={(e) => e.stopPropagation()} >
-            <img src={close} alt="close_icon" onClick={() => setIsOpen(false) } className=" transform translate-x-79 md:translate-x-98 lg:translate-x-115 lg:translate-y-13 lg:w-[28px] lg:h-[28px] w-[23px] h-[23px] translate-y-11 cursor-pointer  " />
+            <img src={close} alt="close_icon" onClick={() => setIsOpen(false)} className=" transform translate-x-79 md:translate-x-98 lg:translate-x-115 lg:translate-y-13 lg:w-[28px] lg:h-[28px] w-[23px] h-[23px] translate-y-11 cursor-pointer  " />
 
             <Request />
           </div>
