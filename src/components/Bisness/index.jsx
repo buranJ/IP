@@ -17,7 +17,7 @@ function Bisness() {
 
     return (
         <section className="bissnessSwiper mt-[60px]">
-            <div className="container">
+            <div className="container mx-auto ">
                 <div className="bisness__content flex items-center justify-around">
                     <div className="bisness__text">
                         <h2 className="bisness__title font-normal text-white text-[24px] leading-[135%] md:text-[38px]">

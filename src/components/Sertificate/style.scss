@@ -1,6 +1,7 @@
-.ser__imgs{
-    img{
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-    }
+.ser__pics   {
+    transition: 320ms ease-in-out;
+}
+
+.ser__pics:hover {
+    filter: drop-shadow(0 0 19px white);
 }

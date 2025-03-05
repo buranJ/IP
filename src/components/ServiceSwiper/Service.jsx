@@ -68,12 +68,12 @@ const ServiceSwiper = () => {
                     1280: { slidesPerView: 4, spaceBetween: 35 },
                     1536: { slidesPerView: 5, spaceBetween: 40 },
                 }}
-                className="w-full margin-[15px]"
+                className="w-full  margin-[15px]"
             >
                 {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="p-3 bg-[#1B1B1B] text-white shadow-lg rounded-lg w-[289px] h-[400px] mb-29 mt-25">
-                            <div className="buttons flex justify-between">
+                    <SwiperSlide  key={index}>
+                        <div className="p-3 bg-[#1B1B1B] text-white shadow-lg  rounded-lg w-[289px] h-[400px] mb-29 mt-25">
+                            <div className="buttons flex  justify-between">
                                 <a href="Товарные знаки" className="buttons">
                                     <button className="px-[10px] py-[5px] text-[14px] bg-white-500">Товарные знаки</button>
                                 </a>
