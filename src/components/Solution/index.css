@@ -42,10 +42,18 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
     display: none;
-    /* display: flex; */
-    /* gap: 20px 0; */
+  
 }
+/* .swiper-initialized{
+    background-image: url(../../assets/img/Bisness/bagroundBissnes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-.solution {
-    background: white;
 }
+ .solution{
+    background-image: url(../../assets/img/Bisness/bagroundBissnes.png) !important;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-size: cover;
+ } */

@@ -124,7 +124,7 @@ function Quiz() {
         <section className="quiz bg-[#da4533] max-w-[ 1920px] ">
             <div className="container mx-auto">
                 <div className="quiz-info ml-[20px]">
-                    <h5 className="quiz__title-main text-white text-[16px] mt-[160px] font-normal md:text-[38px]">Не знаете, что вам нужно? </h5>
+                    <h5 className="quiz__title-main text-white text-[16px] font-normal md:text-[38px]">Не знаете, что вам нужно? </h5>
                     <p className="quiz__des text-white text-[16px] mt-[16px] font-medium">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи</p>
                 </div>
                 <div>

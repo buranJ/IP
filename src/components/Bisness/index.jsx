@@ -16,14 +16,14 @@ function Bisness() {
     }, []);
 
     return (
-        <section className="bisness bg-white mt-[60px]">
+        <section className="bissnessSwiper mt-[60px]">
             <div className="container">
                 <div className="bisness__content flex items-center justify-around">
                     <div className="bisness__text">
-                        <h2 className="bisness__title font-normal text-[24px] leading-[135%] text-[var(--blackbackground)] md:text-[38px]">
+                        <h2 className="bisness__title font-normal text-white text-[24px] leading-[135%] md:text-[38px]">
                             Решения для вашего бизнеса
                         </h2>
-                        <p className="bisness__des font-medium text-[14px] leading-[160%] text-[var(--grey)] mt-[12px]">
+                        <p className="bisness__des font-medium text-[14px] leading-[160%] text-white mt-[12px]">
                             У нас есть все необходимые ресурсы для решения любых ваших потребностей <br />
                             в сфере интеллектуальной собственности
                         </p>
