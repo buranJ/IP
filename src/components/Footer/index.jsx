@@ -5,7 +5,7 @@ import { Nav } from '../Nav'
 function Footer() {
     return (
         <section className="footer bg-[#1B1B1B]">
-            <div className="container__footer mx-[20px]">
+            <div className="container mx-auto ">
                 <div className="footer__upper  pt-[40px] md:pt-[60px] lg:pt-[100px] text-[14px] font-normal
      md:flex md:gap-[20px] ">
                     <img className='flex md:hidden'

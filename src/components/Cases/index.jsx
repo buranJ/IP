@@ -49,8 +49,8 @@ const caseSliderData = [
 function Cases() {
   const [swiperInstance, setSwiperInstance] = useState(null);
   return (
-    <section className="case">
-      <div className="container-case mx-[20px] pb-[120px]">
+    <section className="case bg-[#1b1b1b]">
+      <div className="container mx-auto  pb-[120px]">
         <div className="case-upper-block lg:flex lg:justify-between ">
           <div className="case__info mt-[60px] sm:mt-[80px] md:mt-[120px] lg:mt-[160px]">
             <h6 className="case__title  text-white text-[24px] font-normal sm:text-[28px]  md:text-[32px] lg:text-[38px]">Реализованные кейсы</h6>
@@ -60,10 +60,9 @@ function Cases() {
             <RedButton className="case-red-button">Все кейсы</RedButton>
           </div>
         </div>
-        <div className="case__slider-content rounded-[8px] mt-[30px] md:mt-[40px] xl:mt-[50px]">
-          <Swiper className='case__swiper'
-          
-            spaceBetween={50}
+        <div className="case__slider-content  rounded-[8px] mt-[30px] md:mt-[40px] xl:mt-[50px]">
+          <Swiper className='case__swiper '
+            spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
               1000: {
@@ -84,11 +83,11 @@ function Cases() {
 
           >
             {caseSliderData.map((slide) =>
-              <SwiperSlide className='case__slide bg-[rgba(255, 255, 255, 0.05)] relative' >
-                <img className='case-arrow absolute left-[280px]'
+              <SwiperSlide className='case__slide max-w-[598px] relative' >
+                <img className='case-arrow absolute top-[20px] mr-[20px]'
                   src={Arrow} alt="arrow" />
                 <div className="slide-con">
-                  <div className='case__slider-img bg-[ rgba(255, 255, 255, 0.05)] h-[100px] flex justify-center items-center'>
+                  <div className='case__slider-img  h-[100px] flex justify-center items-center'>
                     <img src={slide.img} alt="img" />
                   </div>
                   <div className="case__slider-info">
@@ -101,7 +100,7 @@ function Cases() {
               </SwiperSlide>
             )}
           </Swiper>
-          <MiniButtons swiperInstance={swiperInstance} />
+          <MiniButtons swiperInstance={swiperInstance} color="#1b1b1b" />
           <div className="flex justify-center lg:hidden">
             <RedButton className="case-red-button  ">Все кейсы</RedButton>
           </div>

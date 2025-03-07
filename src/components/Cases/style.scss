@@ -1,6 +1,16 @@
 .case__swiper {
     width: 100%;
+    display: flex;
+    gap:20px;
+   
   }
+.case__swiper .swiper-slide{
+        background-color: rgba(255, 255, 255, 0.05)
+}
+.case__swiper.swiper-initialized {
+    background-color: #1b1b1b !important;
+}
+
 
 @media(min-width:370px){
     .case-arrow{

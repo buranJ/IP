@@ -10,6 +10,8 @@ import MiniButtons from '../MiniBtns'
 import photo1 from '../../assets/img/Experts/photo__circle1.svg';
 import photo2 from '../../assets/img/Experts/photo__circle2.svg';
 import BigCircles from '../Button/BigCircle'
+import BackGroundImg from '../../assets/img/overall__background.svg'
+import OurExperts from '../OurExperts'
 
 
 function Experts() {
@@ -91,26 +93,41 @@ function Experts() {
             time: '18:50',
         },
     ]
-    const [swiperInstance, setSwiperInstance] = useState(null);
-    const [filteredForums, setFilteredForums] = useState(forumsData);
-    const [currentBtn, setActiveBtn]=useState(null);
+    const pastForums = forumsData.filter((forum) => forum.category === "Прошедшие");
+    const futureForums = forumsData.filter((forum) => forum.category === "Будущие");
 
-    const showFutureForums = () => {
-        const futureForums = forumsData.filter((forum) => forum.category === "Будущие");
-        setFilteredForums(futureForums);
-    };
+    const [swiperInstance, setSwiperInstance] = useState(null);
+    const [filteredForums, setFilteredForums] = useState(pastForums);
+    const [currentBtn, setActiveBtn]=useState("past");
+    const [isPopUpOpen, setPopUpOpen] = useState(false);
+    const [selectedExpert, setSelectedExpert] = useState(null);
+
     const showPastForums = () => {
-        const pastForums = forumsData.filter((forum) => forum.category === "Прошедшие");
         setFilteredForums(pastForums)
     }
+
+    const showFutureForums = () => {
+        setFilteredForums(futureForums);
+    };
+   
+    
+   
+
    const  toggleActiveBtn=(BtnType)=>{
        setActiveBtn((prevBtn)=>(prevBtn===BtnType ? null : BtnType))
     }
 
+    const handleExpertClick = (expert) => {
+      setSelectedExpert(expert); 
+        setPopUpOpen(true); 
+      };
+
     return (
-        <div className="section-overlay bg-[#f8f8f8] py-[60px] relative">
-            <section className="experts bg-[#f9f9f9] pb-[120] xl:pb-[160px]">
-                <div className="container-expert mx-[20px] mt-[60px] sm:mt-[80px] md:mt-[120px] lg:mt-[160px]">
+      
+            <section style={{backgroundImage: `url(${BackGroundImg})`}}
+             className="experts bg-[#f9f9f9]
+             pt-[60px]  sm:pt-[80px]  md:pt-[120px] lg:pt-[160px] pb-[120] xl:pb-[160px]">
+                <div className="container mx-auto ">
                     <div className="experts__upper-info">
                         <div className="experts__title text-black text-[24px] font-normal sm:text-[28px] md:text-[32px] lg:text-[38px]">Команда экспертов</div>
                         <p className="experts__des  mt-[12px] max-w-[707px] text-[16px] text-[#8a8a8a] font-medium">Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса</p>
@@ -143,10 +160,10 @@ function Experts() {
                         >
 
                             {expertsData.map((slide) => 
-                            <SwiperSlide className='expert__slide' >
-                                <div className="expert__photo relative">
+                            <SwiperSlide   onClick={() => handleExpertClick(slide)}
+                             className='expert__slide' >
+                                <div key={slide.id} className="expert__photo rounded-[8px] max-w-[289px] inset-0 opacity-50 bg-[#5c5c5c]  relative">
                                     <img src={slide.img} alt="img__expert" />
-                                    <div className="absolute inset-0 bg-[#5c5c5c] opacity-50"></div>
                                 </div>
                                 <div className="experts__data">
                                     <div className="experts__name mt-[10px] text-4 font-medium md:text-[18px]">{slide.name}</div>
@@ -156,7 +173,10 @@ function Experts() {
                             </SwiperSlide>
                             )}
                         </Swiper>
-                        <MiniButtons swiperInstance={swiperInstance} />
+                        <div className="expert__wrap-minibuttons"> 
+                            <MiniButtons 
+                             swiperInstance={swiperInstance} /></div>
+                    <OurExperts isOpen={isPopUpOpen} onClose={() => setPopUpOpen(false)} expert={selectedExpert} />
                     </div>
                     <div className="experts__forums mt-[35px] md:mt-[40px] lg:mt-[70px] mb-[50px]">
                         <div className="experts__forums-info flex justify-between">
@@ -173,8 +193,10 @@ function Experts() {
                         </div>
                         {filteredForums.map((forum) =>
                             <div className="expert__forums-list w-[1200px] grid grid-cols-1 xl:grid-cols-2  mt-[30px]">
-                                <div className="forums__expert flex items-center  gap-[15px]">
+                                <div className="forums__expert flex items-center  gap-[15px] ">
+                                    <div className="expert__fromu__minphoto-wrapper  rounded-full inset-0 opacity-50 bg-[#5c5c5c] ">
                                     <img src={forum.img} alt="photo" />
+                                    </div>
                                     <div className="forum__expert-data">
                                         <div className="forum__partipicant text-4 font-medium">{forum.name}</div>
                                         <p className="forum__par-des max-w-[330px] mt-[5px] text-[#5c5c5c] text-[14px] font-normal">{forum.position}</p>
@@ -199,9 +221,10 @@ function Experts() {
 
 
                     </div>
+                  
                 </div>
             </section>
-        </div>
+        
 
     )
 

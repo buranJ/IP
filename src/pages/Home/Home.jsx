@@ -13,10 +13,11 @@ import Consultation from "../../components/Consultation"
 
 
 
+
 export const Home = () => {
     return (
 
-        <main className="bg-[#1B1B1B]">
+        <main>
             <Hero />
             <Experience />
             <Sertificate />
@@ -25,6 +26,8 @@ export const Home = () => {
             <Cases />   
             <Experts />
             <Consultation />
+           
+
         </main>
     )
 }

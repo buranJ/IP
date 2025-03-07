@@ -60,8 +60,8 @@ function Process(){
      }
 
  return(
-     <section className="process bg-[#1b1b1b]">
-         <div className="container-process text-white mx-[20px]">
+     <section className="process bg-[#1b1b1b] text-white">
+         <div className="container mx-auto">
              <div className="process__info flex justify-between
               pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[100px] xl:pt-[160px]">
                <div className="process__text-wrapper">

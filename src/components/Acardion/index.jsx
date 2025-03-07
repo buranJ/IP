@@ -45,7 +45,7 @@ function Acardion() {
     };
 
     return (
-        <section className="faq bg-black w-full">
+        <section className="faq bg-[#1b1b1b] w-full">
             <div className="container max-w-[1280px] mx-auto px-[20px]">
                 <div className="faq__content pt-[60px] pb-[60px]">
                     <h2 className="faq__title text-[24px] md:text-[32px] font-semibold text-white mb-[32px]">

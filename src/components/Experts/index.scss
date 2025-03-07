@@ -1,26 +1,11 @@
-.section-overlay {
-    position: relative;
-    overflow: hidden;
+.expert__swiper.swiper-initialized {
+    background-color: transparent !important;
 }
 
-.section-overlay::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0.1) 1px,
-            transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
-    background-size: 50px 100%, 100% 100%;
-    opacity: 0.5;
-    pointer-events: none;
-}
 .active{
     color: #da4533
 }
+
 
 @media(max-width:900px) {
     .expert__wrap {

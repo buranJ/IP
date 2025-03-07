@@ -12,8 +12,8 @@ function Consultation({
     titleClass = '' }) {
     return (
         <section className="consultation flex bg-[#da4533] pt-[40px] md:pt-[60px] lg:pt-[100px] pb-[24px] md:pb-[80px] lg:pb-[100px]">
-            <div className="container-consulation  flex self-center text-white mx-[20px]  text-center md:text-start">
-                <div className="consultation__info flex flex-col items-center  md:items-start">
+            <div className="container mx-auto  flex self-center ">
+                <div className="consultation__info flex text-center  text-white md:text-start  flex-col items-center  md:items-start">
                     <div className={`consulation__title  max-w-[707px] text-[24px]  sm:text-[28px]  md:text-[32px] lg:text-[38px] font-normal ${titleClass}`}>
                         {title} </div>
                     <p className="consultation__des  max-w-[600px] mt-[12px] text-[14px] md:text-[16px] font-medium">У нас есть решения для всех ваших потребностей в сфере защиты и регистрации интеллектуальной собственности</p>
