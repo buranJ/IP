@@ -14,10 +14,14 @@ import Consultation from "../../components/Consultation"
 
 
 
+
+
+
 export const Home = () => {
     return (
 
         <main>
+
             <Hero />
             <Experience />
             <Sertificate />
@@ -26,7 +30,6 @@ export const Home = () => {
             <Cases />   
             <Experts />
             <Consultation />
-           
 
         </main>
     )
