@@ -3,14 +3,10 @@ import logo from "../../assets/img/Header/logo.svg"
 import { Nav } from "../Nav";
 import { Link } from "react-router-dom";
 import BurgerMenu from "../Burger";
-import Elipse from "../Button/Elipse"
+
 import Request from "../Request";
 import { useState } from "react";
 import close from '../../assets/img/Request/close.svg'
-
-
-
-
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
