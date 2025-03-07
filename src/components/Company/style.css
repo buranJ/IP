@@ -1,0 +1,7 @@
+ol {
+    list-style-type: decimal; /* Убедитесь, что стиль нумерации установлен */
+  }
+
+  .pic_2 {
+    mix-blend-mode: luminosity;
+  }

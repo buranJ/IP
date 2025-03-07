@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Breadcrumbs bg='#1b1b1b' />
+      <Breadcrumbs />
 
       <Routes>
 
