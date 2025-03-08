@@ -3,15 +3,16 @@ import './style.scss'
 function OurExperts({isOpen,onClose,expert}) {
      if(!isOpen) return null
     return (
-        <section className="our">
+    
+          <section className="our absolute bg-white  w-[1165px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 ">
                     <div key={expert.id}
                      className="container__our mx-[20px] flex flex-col md:flex-row md:gap-[30px]">
-                        <img className=' rounded-[8px] mt-[10px] mb-[10px] max-w-[440px] inset-0 opacity-50 bg-[#5c5c5c]'
+                        <img className='expert__img rounded-[8px] mt-[10px] mb-[10px] max-w-[440px] inset-0 opacity-50 bg-[#E5E5E5]'
                          src={expert.img} alt="expert__photo" />
                        
                         <div  className="our__info relative"> 
                         <svg onClick={onClose}
-                         className=' absolute top-0 right-0 flex cursor-pointer'
+                         className=' absolute top-[20px] right-0 flex cursor-pointer'
                           width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M1 1L27 27M27 1L1 27" stroke="#DA4533" strokeWidth="2" />
 </svg>
@@ -24,6 +25,7 @@ function OurExperts({isOpen,onClose,expert}) {
                        
                     </div>
         </section>
+
     );
 }
 

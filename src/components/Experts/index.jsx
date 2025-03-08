@@ -4,7 +4,7 @@ import img2 from '../../assets/img/Experts/expert__photo2.svg'
 import img3 from '../../assets/img/Experts/expert__photo3.svg'
 import img4 from '../../assets/img/Experts/expert__photo4.svg'
 import img5 from '../../assets/img/Experts/expert__photo5.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import MiniButtons from '../MiniBtns'
 import photo1 from '../../assets/img/Experts/photo__circle1.svg';
@@ -101,6 +101,7 @@ function Experts() {
     const [currentBtn, setActiveBtn]=useState("past");
     const [isPopUpOpen, setPopUpOpen] = useState(false);
     const [selectedExpert, setSelectedExpert] = useState(null);
+    const [isOverLay,setOverLay]=useState(false)
 
     const showPastForums = () => {
         setFilteredForums(pastForums)
@@ -122,6 +123,18 @@ function Experts() {
         setPopUpOpen(true); 
       };
 
+      useEffect(()=>{
+        if(isOverLay){
+         document.body.style.overflow="hidden"
+        }
+        else{
+             document.body.style.overflow=""
+        }
+        return ()=>{
+               document.body.style.overflow=""
+        }
+      },[isOverLay])
+
     return (
       
             <section style={{backgroundImage: `url(${BackGroundImg})`}}
@@ -132,7 +145,7 @@ function Experts() {
                         <div className="experts__title text-black text-[24px] font-normal sm:text-[28px] md:text-[32px] lg:text-[38px]">Команда экспертов</div>
                         <p className="experts__des  mt-[12px] max-w-[707px] text-[16px] text-[#8a8a8a] font-medium">Наша команда — эксперты в сфере IP. Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса</p>
                     </div>
-                    <div className="experts__swiper-content mt-[35px] md:mt-[40px] lg:mt-[50px]">
+                    <div className="experts__swiper-content relative mt-[35px] md:mt-[40px] lg:mt-[50px] z-0">
                         <Swiper className='expert__swiper'
                             spaceBetween={50}
                             slidesPerView={1}
@@ -158,9 +171,10 @@ function Experts() {
                             onSlideChange={() => console.log('slide change')}
 
                         >
-
                             {expertsData.map((slide) => 
-                            <SwiperSlide   onClick={() => handleExpertClick(slide)}
+                            <SwiperSlide   onClick={() => { handleExpertClick(slide)
+                                setOverLay(true)
+                            }}
                              className='expert__slide' >
                                 <div key={slide.id} className="expert__photo rounded-[8px] max-w-[289px] inset-0 opacity-50 bg-[#5c5c5c]  relative">
                                     <img src={slide.img} alt="img__expert" />
@@ -175,8 +189,12 @@ function Experts() {
                         </Swiper>
                         <div className="expert__wrap-minibuttons"> 
                             <MiniButtons 
-                             swiperInstance={swiperInstance} /></div>
-                    <OurExperts isOpen={isPopUpOpen} onClose={() => setPopUpOpen(false)} expert={selectedExpert} />
+                             swiperInstance={swiperInstance} /></div>   
+                             {isOverLay&& <div style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}} 
+      className="overlay__wrapper fixed inset-0 bg-black bg-opacity-50 z-[40] flex items-center justify-center"></div>   }        
+                 <OurExperts isOpen={isPopUpOpen} onClose={() => { setPopUpOpen(false)
+                   setOverLay(false)
+                 }} expert={selectedExpert} />
                     </div>
                     <div className="experts__forums mt-[35px] md:mt-[40px] lg:mt-[70px] mb-[50px]">
                         <div className="experts__forums-info flex justify-between">
@@ -184,7 +202,9 @@ function Experts() {
                             <div className="experts__forum-category flex gap-[25px] font-medium text-[16px]">
                                 <button className={`past__forums  text-[#5c5c5c] ${currentBtn=== "past"? 'active' : ''}`}
                                      onClick={()=>{toggleActiveBtn("past") 
-                                        showPastForums()}}
+                                        showPastForums()
+                                     
+                                    }}
                                 >Прошедшие</button>
                                 <button className={`future__forums  text-[#5c5c5c] ${currentBtn==="future" ? 'active' : ''}`}
                                     onClick={()=>{toggleActiveBtn("future") 
