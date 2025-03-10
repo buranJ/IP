@@ -22,11 +22,11 @@
 }
 
 .category__buttons {
-  :first-child{
+  :first-child {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
   }
-  :last-child{
+  :last-child {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
@@ -70,6 +70,22 @@
   cursor: pointer;
 }
 
+.categories__popup {
+  @apply overflow-y-hidden rounded-[8px] w-[98%];
+}
+
+.categories__item-faq {
+  @apply flex items-center bg-[#2a2a2a] justify-between;
+}
+
+.categories__text-faq {
+  @apply text-[14px] text-[#fff] font-[400] py-[12px] pl-[15px];
+}
+
+.categories__arrow-faq {
+  padding-right: 19px;
+}
+
 .search__wrapper-faq {
   padding-top: 30px;
   @apply mx-auto;
@@ -99,7 +115,7 @@
 }
 
 .search__top-title {
-  @apply text-[24px] text-[#fff] font-[400] mt-[155px] ;
+  @apply text-[24px] text-[#fff] font-[400] mt-[155px];
 }
 
 @media screen and (max-width: 1024px) {

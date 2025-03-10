@@ -5,22 +5,22 @@ import "./style.css";
 import search from "../../assets/img/Cards/search.svg";
 import topImg from "../../assets/img/Faq/img.png";
 
-// const arr2 = ({ direction }) => {
-//   return (
-//     <svg
-//       width="16"
-//       height="9"
-//       viewBox="0 0 16 9"
-//       fill="none"
-//       className={`transition-transform duration-300 ${
-//         direction === "up" ? "rotate-180" : ""
-//       }`}
-//       xmlns="http://www.w3.org/2000/svg"
-//     >
-//       <path d="M1 1L8 8L15 1" stroke="white" />
-//     </svg>
-//   );
-// };
+const Arr2 = ({ direction }) => {
+  return (
+    <svg
+      width="16"
+      height="9"
+      viewBox="0 0 16 9"
+      fill="none"
+      className={`transition-transform duration-300 ${
+        direction === "up" ? "rotate-180" : ""
+      }`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 1L8 8L15 1" stroke="white" />
+    </svg>
+  );
+};
 
 const Arrow = ({ direction }) => {
   return (
@@ -45,6 +45,7 @@ const Arrow = ({ direction }) => {
 export const Search = () => {
   console.log(searchData.faq);
   const [openIndex, setOpenIndex] = useState(0);
+  const [openHeight, setOpenHeight] = useState(46);
 
   const toggleOpen = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -52,8 +53,6 @@ export const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Все услуги");
   const categories = searchData.filters;
-  console.log(categories);
-  console.log(selectedCategory);
 
   const filteredServices = searchData.faq.filter(
     (service) =>
@@ -61,7 +60,6 @@ export const Search = () => {
         service.category === selectedCategory) &&
       service.question.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  console.log(filteredServices);
 
   return (
     <>
@@ -72,7 +70,11 @@ export const Search = () => {
               <div className="search__top-wrapper">
                 <h2 className="search__top-title xl:text-[38px]">FAQ</h2>
               </div>
-              <img src={topImg} alt="Img" className="search__top-img hidden xl:block" />
+              <img
+                src={topImg}
+                alt="Img"
+                className="search__top-img hidden xl:block"
+              />
             </div>
 
             <div className="search__wrapper-faq">
@@ -87,11 +89,36 @@ export const Search = () => {
                 <img src={search} alt="Поиск" className="search__icon-faq" />
               </div>
             </div>
-            <div className="categories__container-faq categories__container mx-[20px] ">
-              <p className="category  pl-[10px] text-[#8A8A8A] font-medium">
-                КАТЕГОРИИ
-              </p>
-              <label className="category__buttons rounded-[8px]">
+            <div className="categories__container-faq categories__container mx-[20px] flex flex-col gap-[6px] xl:flex-row xl:gap-[15px]">
+              <p className="category text-[#8A8A8A] font-medium">КАТЕГОРИИ</p>
+              <div
+                className={`categories__popup xl:hidden`}
+                style={openHeight === 46 ? { height: "46px" } : {height: "400px"}}
+                onClick={() => {
+                  openHeight === 46 ? setOpenHeight(400) : setOpenHeight(46);
+                }}
+              >
+                {categories.map((category) => (
+                  <div
+                    className="categories__item-faq cursor-pointer"
+                    key={category}
+                  >
+                    <span
+                      className={`categories__text-faq text-white ${
+                        selectedCategory === category ? "active-faq" : ""
+                      }`}
+                      onClick={() => setSelectedCategory(category)}
+                    >
+                      {category}
+                    </span>
+                    <div className="categories__arrow-faq">
+                      <Arr2 direction={openHeight === 46 ? "down" : "up"} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <label className="category__buttons rounded-[8px] hidden xl:block">
                 {categories.map((category) => (
                   <button
                     key={category}
@@ -107,7 +134,7 @@ export const Search = () => {
             </div>
             <div className="faq-container flex flex-col">
               <div className="faq bg-black w-[91%] mx-[20px] xl:w-[598px]">
-                <div className="container max-w-[1280px] mx-auto px-[20px]">
+                <div className="container max-w-[1280px] mx-auto pr-[20px]">
                   <div className="faq__content pt-[60px] pb-[60px]">
                     <div className="faq__list flex flex-col gap-[12px] xl:max-h-[700px] xl:flex-wrap">
                       {selectedCategory === "Все услуги"
